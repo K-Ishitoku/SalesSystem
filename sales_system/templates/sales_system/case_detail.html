@@ -1,0 +1,41 @@
+{% load django_bootstrap5 %}
+{% load static %}
+<head>
+</head>
+<link rel="stylesheet" href="{% static 'sales_system/style.css' %}">
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<body>
+    <table border="1" cellspacing="0" cellpadding="0">
+        <tr><th>ベンダー</th><td>{{ case.vendor_id }}</td></tr>
+        <tr><th>引用元</th><td></td></tr>
+        <tr><th>SAP</th><td></td></tr>
+        <tr><th>案件名</th><td></td></tr>
+        <tr><th>業界名</th><td></td></tr>
+        <tr><th>業界</th><td></td></tr>
+        <tr><th>単価下限</th><td></td></tr>
+        <tr><th>単価上限</th><td></td></tr>
+        <tr><th>精算</th><td></td></tr>
+        <tr><th>役割概要</th><td></td></tr>
+        <tr><th>詳細</th><td></td></tr>
+        <tr><th>必須スキル</th><td></td></tr>
+        <tr><th>尚可スキル</th><td></td></tr>
+        <tr><th>年齢制限</th><td></td></tr>
+        <tr><th>英語力</th><td>{{ case.english_skills }}</td></tr>
+        <tr><th>外国籍可否</th><td></td></tr>
+        <tr><th>勤務地</th><td></td></tr>
+        <tr><th>開始予定日</th><td></td></tr>
+        <tr><th>終了予定日</th><td></td></tr>
+        <tr><th>出社条件</th><td></td></tr>
+        <tr><th>担当者</th><td></td></tr>
+        <tr><th>契約条件</th><td></td></tr>
+        <tr><th>案件登録日時</th><td>{{ case.created_at }}</td></tr>
+        <tr><th>登録者</th><td>{{ case.regstant }}</td></tr>
+        <tr><th>案件更新日時</th><td>{{ case.updated_at|date:"Y/m/d" }}</td></tr>
+        <tr><th>更新者</th><td>{{ case.updater }}</td></tr>
+        <tr><th>備考</th><td>{{ case.remarks }}</td></tr>
+    </table>
+    <hr />
+    <a href="./">戻る</a><br />
+</body>
+</html>

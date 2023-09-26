@@ -1,0 +1,68 @@
+{% load django_bootstrap5 %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'sales_system/style.css' %}">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+    <div class="bg-dark bg-gradient text-white fs-5 mb-4 px-2">
+        案件一覧
+    </div>
+    <table class="table table-striped table-bordered border-dark text-center">
+        <thead class="bg-primary bg-gradient text-white">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">SAP</th>
+                <th scope="col">案件名</th>
+                <th scope="col">業界</th>
+                <th scope="col">単価下限</th>
+                <th scope="col">単価上限</th>
+                <th scope="col">役割概要</th>
+                <th scope="col">開始予定日</th>
+                <th scope="col">終了予定日</th>
+                <th scope="col">詳細表示</th>
+            </tr>
+        </thead>
+        <tbody class="text-nowrap align-middle">
+            <tr>
+                <th scope="row">1</th>
+                <td>○</td>
+                <td>刷新プロジェクト</td>
+                <td>製造</td>
+                <td>70</td>
+                <td>90</td>
+                <td>SACコンサル</td>
+                <td>2023/09</td>
+                <td>2024/01</td>
+                <td><button type="button" class="btn btn-outline-primary">詳細表示</button></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td>新規導入プロジェクト</td>
+                <td>精密機器</td>
+                <td>60</td>
+                <td>80</td>
+                <td>Aribaコンサルタント</td>
+                <td>2023/10</td>
+                <td>2024/06</td>
+                <td><button type="button" class="btn btn-outline-primary">詳細表示</button></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>○</td>
+                <td>新規導入プロジェクト</td>
+                <td>製造</td>
+                <td>80</td>
+                <td>100</td>
+                <td>FIコンサル</td>
+                <td>即日</td>
+                <td>2024/05</td>
+                <td><button type="button" class="btn btn-outline-primary">詳細表示</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
